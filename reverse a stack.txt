@@ -1,0 +1,18 @@
+
+class Solution
+{ 
+    static ArrayList<Integer>arr=new ArrayList<>();
+    static int top=0;
+    static void reverse(Stack<Integer> s)
+    {
+        // add your code here
+        if(!s.isEmpty()){
+            arr.add(s.pop());
+            reverse(s);
+            if(top<arr.size()){
+                s.push(arr.get(top++));
+            }
+            
+        }
+    }
+}
